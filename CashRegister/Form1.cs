@@ -102,6 +102,7 @@ namespace CashRegister
 
         private void ChangeButton_Click(object sender, EventArgs e)
         {
+            //bunch of change stuff
             errorLabel2.Visible = false;
             errorLabel3.Visible = false;
             if (tenderedAmountBox.Text == "")
@@ -133,6 +134,7 @@ namespace CashRegister
 
         private void RecieptButton_Click(object sender, EventArgs e)
         {
+            //Printing the reciept
             SoundPlayer player = new SoundPlayer(Properties.Resources.printSound);
 
             recieptTitleLabel.Visible = true;
