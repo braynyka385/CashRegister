@@ -104,7 +104,10 @@ namespace CashRegister
         {
             errorLabel2.Visible = false;
             errorLabel3.Visible = false;
-
+            if (tenderedAmountBox.Text == "")
+            {
+                tenderedAmountBox.Text = "0";
+            }
             try
             {
                 amountTendered = Convert.ToDouble(tenderedAmountBox.Text);
@@ -238,6 +241,11 @@ namespace CashRegister
             subtotal = 0;
             total = 0;
             tax = 0;
+        }
+
+        private void ManagerEntry_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

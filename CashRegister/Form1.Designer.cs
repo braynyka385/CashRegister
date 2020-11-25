@@ -175,6 +175,7 @@
             this.managerEntry.TabIndex = 11;
             this.managerEntry.Text = "🔒";
             this.managerEntry.UseVisualStyleBackColor = true;
+            this.managerEntry.Click += new System.EventHandler(this.ManagerEntry_Click);
             // 
             // tenderedLabel
             // 
@@ -402,9 +403,9 @@
             this.errorLabel3.AutoSize = true;
             this.errorLabel3.Location = new System.Drawing.Point(133, 295);
             this.errorLabel3.Name = "errorLabel3";
-            this.errorLabel3.Size = new System.Drawing.Size(106, 13);
+            this.errorLabel3.Size = new System.Drawing.Size(111, 13);
             this.errorLabel3.TabIndex = 32;
-            this.errorLabel3.Text = "Not enough Change!";
+            this.errorLabel3.Text = "Not enough tendered!";
             this.errorLabel3.Visible = false;
             // 
             // Form1
