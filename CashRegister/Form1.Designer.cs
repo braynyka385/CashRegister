@@ -113,7 +113,7 @@
             this.gameTicketAmountBox.Name = "gameTicketAmountBox";
             this.gameTicketAmountBox.Size = new System.Drawing.Size(100, 20);
             this.gameTicketAmountBox.TabIndex = 5;
-            this.gameTicketAmountBox.TextChanged += new System.EventHandler(this.GameTicketAmount_TextChanged);
+            //this.gameTicketAmountBox.TextChanged += new System.EventHandler(this.GameTicketAmount_TextChanged);
             // 
             // titleLabel
             // 
