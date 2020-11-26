@@ -613,6 +613,7 @@
             this.priceChangeButton.TabIndex = 51;
             this.priceChangeButton.Text = "Verify Price Changes";
             this.priceChangeButton.UseVisualStyleBackColor = true;
+            this.priceChangeButton.Visible = false;
             this.priceChangeButton.Click += new System.EventHandler(this.PriceChangeButton_Click);
             // 
             // priceChangeErrorLabel

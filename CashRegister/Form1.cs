@@ -379,7 +379,7 @@ namespace CashRegister
             fastPassPriceBox.Visible = false;
             fastPassPriceLabel.Visible = false;
             priceChangeButton.Visible = false;
-            priceChangeErrorLabel.Visible = true;
+            priceChangeErrorLabel.Visible = false;
         }
 
         private void PriceChangeButton_Click(object sender, EventArgs e)
@@ -387,9 +387,9 @@ namespace CashRegister
             priceChangeErrorLabel.Visible = false;
             try
             {
-                rideTicketPrice = Convert.ToInt32(ridePriceBox);
-                gameTicketPrice = Convert.ToInt32(gamePriceBox);
-                fastPassPrice = Convert.ToInt32(fastPassPriceBox);
+                rideTicketPrice = Convert.ToDouble(ridePriceBox.Text);
+                gameTicketPrice = Convert.ToDouble(gamePriceBox.Text);
+                fastPassPrice = Convert.ToDouble(fastPassPriceBox.Text);
             }
             catch
             {
