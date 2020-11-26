@@ -61,6 +61,26 @@
             this.errorLabel = new System.Windows.Forms.Label();
             this.errorLabel2 = new System.Windows.Forms.Label();
             this.errorLabel3 = new System.Windows.Forms.Label();
+            this.screenCover = new System.Windows.Forms.Label();
+            this.usernameLabel = new System.Windows.Forms.Label();
+            this.passwordLabel = new System.Windows.Forms.Label();
+            this.pinLabel = new System.Windows.Forms.Label();
+            this.usernameBox = new System.Windows.Forms.TextBox();
+            this.passwordBox = new System.Windows.Forms.TextBox();
+            this.pinBox = new System.Windows.Forms.TextBox();
+            this.loginButton = new System.Windows.Forms.Button();
+            this.returnToTerminal = new System.Windows.Forms.Button();
+            this.invalidCredentialsLabel = new System.Windows.Forms.Label();
+            this.pinErrorLabel = new System.Windows.Forms.Label();
+            this.sessionRevenueLabel = new System.Windows.Forms.Label();
+            this.ridePriceBox = new System.Windows.Forms.TextBox();
+            this.fastPassPriceBox = new System.Windows.Forms.TextBox();
+            this.gamePriceBox = new System.Windows.Forms.TextBox();
+            this.ridePriceLabel = new System.Windows.Forms.Label();
+            this.gamePriceLabel = new System.Windows.Forms.Label();
+            this.fastPassPriceLabel = new System.Windows.Forms.Label();
+            this.priceChangeButton = new System.Windows.Forms.Button();
+            this.priceChangeErrorLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // rideTicketLabel
@@ -113,7 +133,6 @@
             this.gameTicketAmountBox.Name = "gameTicketAmountBox";
             this.gameTicketAmountBox.Size = new System.Drawing.Size(100, 20);
             this.gameTicketAmountBox.TabIndex = 5;
-            //this.gameTicketAmountBox.TextChanged += new System.EventHandler(this.GameTicketAmount_TextChanged);
             // 
             // titleLabel
             // 
@@ -408,11 +427,229 @@
             this.errorLabel3.Text = "Not enough tendered!";
             this.errorLabel3.Visible = false;
             // 
+            // screenCover
+            // 
+            this.screenCover.Location = new System.Drawing.Point(0, -3);
+            this.screenCover.Name = "screenCover";
+            this.screenCover.Size = new System.Drawing.Size(514, 497);
+            this.screenCover.TabIndex = 33;
+            this.screenCover.Visible = false;
+            // 
+            // usernameLabel
+            // 
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameLabel.Location = new System.Drawing.Point(38, 108);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(112, 24);
+            this.usernameLabel.TabIndex = 34;
+            this.usernameLabel.Text = "Username : ";
+            this.usernameLabel.Visible = false;
+            // 
+            // passwordLabel
+            // 
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordLabel.Location = new System.Drawing.Point(37, 162);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(112, 24);
+            this.passwordLabel.TabIndex = 35;
+            this.passwordLabel.Text = "Password  : ";
+            this.passwordLabel.Visible = false;
+            // 
+            // pinLabel
+            // 
+            this.pinLabel.AutoSize = true;
+            this.pinLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pinLabel.Location = new System.Drawing.Point(38, 219);
+            this.pinLabel.Name = "pinLabel";
+            this.pinLabel.Size = new System.Drawing.Size(110, 24);
+            this.pinLabel.TabIndex = 36;
+            this.pinLabel.Text = "PIN            : ";
+            this.pinLabel.Visible = false;
+            // 
+            // usernameBox
+            // 
+            this.usernameBox.Location = new System.Drawing.Point(157, 113);
+            this.usernameBox.Name = "usernameBox";
+            this.usernameBox.Size = new System.Drawing.Size(100, 20);
+            this.usernameBox.TabIndex = 37;
+            this.usernameBox.Visible = false;
+            // 
+            // passwordBox
+            // 
+            this.passwordBox.Location = new System.Drawing.Point(157, 167);
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.Size = new System.Drawing.Size(100, 20);
+            this.passwordBox.TabIndex = 38;
+            this.passwordBox.Visible = false;
+            // 
+            // pinBox
+            // 
+            this.pinBox.Location = new System.Drawing.Point(157, 225);
+            this.pinBox.Name = "pinBox";
+            this.pinBox.Size = new System.Drawing.Size(100, 20);
+            this.pinBox.TabIndex = 39;
+            this.pinBox.Visible = false;
+            // 
+            // loginButton
+            // 
+            this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginButton.Location = new System.Drawing.Point(45, 324);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(212, 54);
+            this.loginButton.TabIndex = 40;
+            this.loginButton.Text = "Login";
+            this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Visible = false;
+            this.loginButton.Click += new System.EventHandler(this.LoginButton_Click);
+            // 
+            // returnToTerminal
+            // 
+            this.returnToTerminal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnToTerminal.Location = new System.Drawing.Point(45, 399);
+            this.returnToTerminal.Name = "returnToTerminal";
+            this.returnToTerminal.Size = new System.Drawing.Size(212, 32);
+            this.returnToTerminal.TabIndex = 41;
+            this.returnToTerminal.Text = "Return to Terminal";
+            this.returnToTerminal.UseVisualStyleBackColor = true;
+            this.returnToTerminal.Visible = false;
+            this.returnToTerminal.Click += new System.EventHandler(this.ReturnToTerminal_Click);
+            // 
+            // invalidCredentialsLabel
+            // 
+            this.invalidCredentialsLabel.AutoSize = true;
+            this.invalidCredentialsLabel.Location = new System.Drawing.Point(92, 307);
+            this.invalidCredentialsLabel.Name = "invalidCredentialsLabel";
+            this.invalidCredentialsLabel.Size = new System.Drawing.Size(176, 13);
+            this.invalidCredentialsLabel.TabIndex = 42;
+            this.invalidCredentialsLabel.Text = "Invalid credentials. Please try again.";
+            this.invalidCredentialsLabel.Visible = false;
+            // 
+            // pinErrorLabel
+            // 
+            this.pinErrorLabel.AutoSize = true;
+            this.pinErrorLabel.Location = new System.Drawing.Point(130, 254);
+            this.pinErrorLabel.Name = "pinErrorLabel";
+            this.pinErrorLabel.Size = new System.Drawing.Size(115, 13);
+            this.pinErrorLabel.TabIndex = 43;
+            this.pinErrorLabel.Text = "PIN must be a number.";
+            this.pinErrorLabel.Visible = false;
+            // 
+            // sessionRevenueLabel
+            // 
+            this.sessionRevenueLabel.AutoSize = true;
+            this.sessionRevenueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sessionRevenueLabel.Location = new System.Drawing.Point(88, 57);
+            this.sessionRevenueLabel.Name = "sessionRevenueLabel";
+            this.sessionRevenueLabel.Size = new System.Drawing.Size(60, 24);
+            this.sessionRevenueLabel.TabIndex = 44;
+            this.sessionRevenueLabel.Text = "label1";
+            this.sessionRevenueLabel.Visible = false;
+            // 
+            // ridePriceBox
+            // 
+            this.ridePriceBox.Location = new System.Drawing.Point(395, 113);
+            this.ridePriceBox.Name = "ridePriceBox";
+            this.ridePriceBox.Size = new System.Drawing.Size(100, 20);
+            this.ridePriceBox.TabIndex = 45;
+            this.ridePriceBox.Visible = false;
+            // 
+            // fastPassPriceBox
+            // 
+            this.fastPassPriceBox.Location = new System.Drawing.Point(395, 166);
+            this.fastPassPriceBox.Name = "fastPassPriceBox";
+            this.fastPassPriceBox.Size = new System.Drawing.Size(100, 20);
+            this.fastPassPriceBox.TabIndex = 46;
+            this.fastPassPriceBox.Visible = false;
+            // 
+            // gamePriceBox
+            // 
+            this.gamePriceBox.Location = new System.Drawing.Point(395, 225);
+            this.gamePriceBox.Name = "gamePriceBox";
+            this.gamePriceBox.Size = new System.Drawing.Size(100, 20);
+            this.gamePriceBox.TabIndex = 47;
+            this.gamePriceBox.Visible = false;
+            // 
+            // ridePriceLabel
+            // 
+            this.ridePriceLabel.AutoSize = true;
+            this.ridePriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ridePriceLabel.Location = new System.Drawing.Point(274, 109);
+            this.ridePriceLabel.Name = "ridePriceLabel";
+            this.ridePriceLabel.Size = new System.Drawing.Size(112, 24);
+            this.ridePriceLabel.TabIndex = 48;
+            this.ridePriceLabel.Text = "Ride Price : ";
+            this.ridePriceLabel.Visible = false;
+            // 
+            // gamePriceLabel
+            // 
+            this.gamePriceLabel.AutoSize = true;
+            this.gamePriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gamePriceLabel.Location = new System.Drawing.Point(262, 221);
+            this.gamePriceLabel.Name = "gamePriceLabel";
+            this.gamePriceLabel.Size = new System.Drawing.Size(124, 24);
+            this.gamePriceLabel.TabIndex = 49;
+            this.gamePriceLabel.Text = "Game Price : ";
+            this.gamePriceLabel.Visible = false;
+            // 
+            // fastPassPriceLabel
+            // 
+            this.fastPassPriceLabel.AutoSize = true;
+            this.fastPassPriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fastPassPriceLabel.Location = new System.Drawing.Point(233, 163);
+            this.fastPassPriceLabel.Name = "fastPassPriceLabel";
+            this.fastPassPriceLabel.Size = new System.Drawing.Size(153, 24);
+            this.fastPassPriceLabel.TabIndex = 50;
+            this.fastPassPriceLabel.Text = "Fast Pass Price : ";
+            this.fastPassPriceLabel.Visible = false;
+            // 
+            // priceChangeButton
+            // 
+            this.priceChangeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.priceChangeButton.Location = new System.Drawing.Point(353, 326);
+            this.priceChangeButton.Name = "priceChangeButton";
+            this.priceChangeButton.Size = new System.Drawing.Size(142, 52);
+            this.priceChangeButton.TabIndex = 51;
+            this.priceChangeButton.Text = "Verify Price Changes";
+            this.priceChangeButton.UseVisualStyleBackColor = true;
+            this.priceChangeButton.Click += new System.EventHandler(this.PriceChangeButton_Click);
+            // 
+            // priceChangeErrorLabel
+            // 
+            this.priceChangeErrorLabel.AutoSize = true;
+            this.priceChangeErrorLabel.Location = new System.Drawing.Point(360, 258);
+            this.priceChangeErrorLabel.Name = "priceChangeErrorLabel";
+            this.priceChangeErrorLabel.Size = new System.Drawing.Size(135, 13);
+            this.priceChangeErrorLabel.TabIndex = 52;
+            this.priceChangeErrorLabel.Text = "All prices must be numbers.";
+            this.priceChangeErrorLabel.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(513, 493);
+            this.Controls.Add(this.priceChangeErrorLabel);
+            this.Controls.Add(this.priceChangeButton);
+            this.Controls.Add(this.fastPassPriceLabel);
+            this.Controls.Add(this.gamePriceLabel);
+            this.Controls.Add(this.ridePriceLabel);
+            this.Controls.Add(this.gamePriceBox);
+            this.Controls.Add(this.fastPassPriceBox);
+            this.Controls.Add(this.ridePriceBox);
+            this.Controls.Add(this.sessionRevenueLabel);
+            this.Controls.Add(this.pinErrorLabel);
+            this.Controls.Add(this.invalidCredentialsLabel);
+            this.Controls.Add(this.returnToTerminal);
+            this.Controls.Add(this.loginButton);
+            this.Controls.Add(this.pinBox);
+            this.Controls.Add(this.passwordBox);
+            this.Controls.Add(this.usernameBox);
+            this.Controls.Add(this.pinLabel);
+            this.Controls.Add(this.passwordLabel);
+            this.Controls.Add(this.usernameLabel);
+            this.Controls.Add(this.screenCover);
             this.Controls.Add(this.errorLabel3);
             this.Controls.Add(this.errorLabel2);
             this.Controls.Add(this.errorLabel);
@@ -489,6 +726,26 @@
         private System.Windows.Forms.Label errorLabel;
         private System.Windows.Forms.Label errorLabel2;
         private System.Windows.Forms.Label errorLabel3;
+        private System.Windows.Forms.Label screenCover;
+        private System.Windows.Forms.Label usernameLabel;
+        private System.Windows.Forms.Label passwordLabel;
+        private System.Windows.Forms.Label pinLabel;
+        private System.Windows.Forms.TextBox usernameBox;
+        private System.Windows.Forms.TextBox passwordBox;
+        private System.Windows.Forms.TextBox pinBox;
+        private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.Button returnToTerminal;
+        private System.Windows.Forms.Label invalidCredentialsLabel;
+        private System.Windows.Forms.Label pinErrorLabel;
+        private System.Windows.Forms.Label sessionRevenueLabel;
+        private System.Windows.Forms.TextBox ridePriceBox;
+        private System.Windows.Forms.TextBox fastPassPriceBox;
+        private System.Windows.Forms.TextBox gamePriceBox;
+        private System.Windows.Forms.Label ridePriceLabel;
+        private System.Windows.Forms.Label gamePriceLabel;
+        private System.Windows.Forms.Label fastPassPriceLabel;
+        private System.Windows.Forms.Button priceChangeButton;
+        private System.Windows.Forms.Label priceChangeErrorLabel;
     }
 }
 

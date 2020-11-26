@@ -15,9 +15,9 @@ namespace CashRegister
     public partial class Form1 : Form
     {
         //Global Variables
-        const double rideTicketPrice = 1.25;
-        const double fastPassPrice = 15.00;
-        const double gameTicketPrice = 2.00;
+        double rideTicketPrice = 1.25;
+        double fastPassPrice = 15.00;
+        double gameTicketPrice = 2.00;
         const double taxRate = 0.13;
 
         int rideTicketAmount;
@@ -244,7 +244,158 @@ namespace CashRegister
 
         private void ManagerEntry_Click(object sender, EventArgs e)
         {
+            //Producing login screen
+            //invalidCredentialsLabel.Visible = false;
+            passwordBox.Visible = true;
+            passwordLabel.Visible = true;
+            usernameBox.Visible = true;
+            usernameLabel.Visible = true;
+            pinBox.Visible = true;
+            pinLabel.Visible = true;
+            loginButton.Visible = true;
+            returnToTerminal.Visible = true;
+            screenCover.Visible = true;
 
+            //Removing reciept
+            recieptChangeLabel.Visible = false;
+            recieptTenderedLabel.Visible = false;
+            recieptTotalLabel.Visible = false;
+            recieptTaxLabel.Visible = false;
+            recieptSubTotalLabel.Visible = false;
+            recieptGameTicketsLabel.Visible = false;
+            recieptFastPassLabel.Visible = false;
+            recieptRideTicketLabel.Visible = false;
+            recieptDateLabel.Visible = false;
+            recieptOrderNumberLabel.Visible = false;
+            recieptTitleLabel.Visible = false;
+        }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            //Declaring username, password, PIN
+            string username = "Karen";
+            string password = "KareBear123";
+            int pin = 4321;
+
+            bool usernameCorrect = false;
+            bool passwordCorrect = false;
+            bool pinCorrect = false;
+
+            pinErrorLabel.Visible = false;
+            invalidCredentialsLabel.Visible = false;
+
+            if (usernameBox.Text == username)
+            {
+                usernameCorrect = true;
+            }
+            else
+            {
+                invalidCredentialsLabel.Visible = true;
+                invalidCredentialsLabel.BringToFront();
+            }
+
+            if (passwordBox.Text == password)
+            {
+                passwordCorrect = true;
+            }
+            else
+            {
+                invalidCredentialsLabel.Visible = true;
+                invalidCredentialsLabel.BringToFront();
+            }
+            //Avoiding crash from letter in PIN box
+            try
+            {
+                if (Convert.ToInt32(pinBox.Text) == pin)
+                {
+                    pinCorrect = true;
+                }
+                else
+                {
+                    invalidCredentialsLabel.Visible = true;
+                    invalidCredentialsLabel.BringToFront();
+                }
+            }
+            catch
+            {
+                pinErrorLabel.Visible = true;
+                pinErrorLabel.BringToFront();
+            }
+
+
+            if (usernameCorrect == true && passwordCorrect == true && pinCorrect == true)
+            {
+                //hiding login screen
+                passwordBox.Visible = false;
+                passwordLabel.Visible = false;
+                usernameBox.Visible = false;
+                usernameLabel.Visible = false;
+                pinBox.Visible = false;
+                pinLabel.Visible = false;
+                loginButton.Visible = false;
+
+                sessionRevenueLabel.Text = "Revenue this session: " + $"{totalRevenue.ToString("$0.00")}";
+                sessionRevenueLabel.Visible = true;
+                sessionRevenueLabel.BringToFront();
+                ridePriceBox.Visible = true;
+                ridePriceBox.BringToFront();
+                ridePriceLabel.Visible = true;
+                ridePriceLabel.BringToFront();
+                gamePriceBox.Visible = true;
+                gamePriceBox.BringToFront();
+                gamePriceLabel.Visible = true;
+                gamePriceLabel.BringToFront();
+                fastPassPriceBox.Visible = true;
+                fastPassPriceBox.BringToFront();
+                fastPassPriceLabel.Visible = true;
+                fastPassPriceLabel.BringToFront();
+                priceChangeButton.Visible = true;
+                priceChangeButton.BringToFront();
+            }
+        }
+
+        private void ReturnToTerminal_Click(object sender, EventArgs e)
+        {
+            //Clearing credential boxes
+            usernameBox.Text = "";
+            passwordBox.Text = "";
+            pinBox.Text = "";
+
+            //Clearing everythng else
+            passwordBox.Visible = false;
+            passwordLabel.Visible = false;
+            usernameBox.Visible = false;
+            usernameLabel.Visible = false;
+            pinBox.Visible = false;
+            pinLabel.Visible = false;
+            loginButton.Visible = false;
+            sessionRevenueLabel.Visible = false;
+            returnToTerminal.Visible = false;
+            screenCover.Visible = false;
+            ridePriceBox.Visible = false;
+            ridePriceLabel.Visible = false;
+            gamePriceBox.Visible = false;
+            gamePriceLabel.Visible = false;
+            fastPassPriceBox.Visible = false;
+            fastPassPriceLabel.Visible = false;
+            priceChangeButton.Visible = false;
+            priceChangeErrorLabel.Visible = true;
+        }
+
+        private void PriceChangeButton_Click(object sender, EventArgs e)
+        {
+            priceChangeErrorLabel.Visible = false;
+            try
+            {
+                rideTicketPrice = Convert.ToInt32(ridePriceBox);
+                gameTicketPrice = Convert.ToInt32(gamePriceBox);
+                fastPassPrice = Convert.ToInt32(fastPassPriceBox);
+            }
+            catch
+            {
+                priceChangeErrorLabel.Visible = true;
+                priceChangeErrorLabel.BringToFront();
+            }
         }
     }
 }
