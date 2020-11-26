@@ -83,5 +83,11 @@
   <ItemGroup>
     <None Include="Resources\Dot Matrix Printer-SoundBible.com-790333844.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ticket_icon-icons.com_66130.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon1.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

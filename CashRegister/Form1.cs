@@ -1,4 +1,9 @@
-﻿using System;
+﻿//Brayden Nykamp
+//26-11-2020
+//Simple Cash Register
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -125,8 +130,6 @@ namespace CashRegister
             {
                 errorLabel3.Visible = true;
             }
-        
-
         }
 
         private void RecieptButton_Click(object sender, EventArgs e)
@@ -384,6 +387,7 @@ namespace CashRegister
 
         private void PriceChangeButton_Click(object sender, EventArgs e)
         {
+            //Changing the price of items
             priceChangeErrorLabel.Visible = false;
             try
             {

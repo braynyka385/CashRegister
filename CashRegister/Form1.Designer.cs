@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.rideTicketLabel = new System.Windows.Forms.Label();
             this.fastPassLabel = new System.Windows.Forms.Label();
             this.gameTicketLabel = new System.Windows.Forms.Label();
@@ -684,6 +685,7 @@
             this.Controls.Add(this.gameTicketLabel);
             this.Controls.Add(this.fastPassLabel);
             this.Controls.Add(this.rideTicketLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Theme Park Terminal";
             this.Load += new System.EventHandler(this.Form1_Load);
